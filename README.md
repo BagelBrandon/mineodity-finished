@@ -1,7 +1,7 @@
 # Mineodity
 
-## About
-You are Major Steve a major of mine force betalion 14a. Your task is to kill the C R E E P E R S and G H A S T S who are threatening the world of mineodity. Godspeed Major Steve. 
+## About Mineodity
+You are Major Steve a major of mine force betalion 141 Alpha Romeo. Your task is to kill the C R E E P E R S and   G H A S T S who are threatening the world of mineodity. We do not know where the creepers and ghasts came from all we know is they need to be ERADICATED. Godspeed Major Steve. 
 
 ## How To Play
 
