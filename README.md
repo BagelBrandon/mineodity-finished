@@ -25,6 +25,6 @@ You have 5 lives to kill the C R E E P E R S
 4. If you complete the mission Major Steve you will be awarded with the diamonds of Mineodity and congratulation from Galaxy Goats with your own minecraft parody for you.
 ![alt text](https://raw.githubusercontent.com/HiImChubs/mineodity-finished/master/assets/img/finish.jpg)
 
-
+<http://www.example.com>
 
 
