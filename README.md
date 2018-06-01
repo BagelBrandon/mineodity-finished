@@ -26,6 +26,6 @@ You have 5 lives to kill the C R E E P E R S
 ![alt text](https://raw.githubusercontent.com/HiImChubs/mineodity-finished/master/assets/img/finish.jpg)
 
 # Download Mineodity Here
-<https://github.com/HiImChubs/mineodity-finished/releases/download/1/Mineodity.exe>
+<a href="https://github.com/HiImChubs/mineodity-finished/releases/download/1/Mineodity.exe">![alt text](https://raw.githubusercontent.com/HiImChubs/mineodity-finished/master/assets/img/download.png)
 
 
