@@ -1,12 +1,16 @@
 # Imports
+import sys
+import os
 import pygame
 import random
 
+if getattr(sys, 'frozen', False):
+    current_path = sys._MEIPASS
+else:
+    current_path = os.path.dirname(__file__)
+
 # Initialize game engine
 pygame.init()
-
-
-
 
 # Window
 WIDTH = 960
@@ -35,43 +39,44 @@ BLACK = (0, 0, 0)
 YELLOW = (255, 255, 0)
 GREEN = (100, 255, 100)
 
-# Images
-ship_img = pygame.image.load('assets/img/player.png')
-laser_img = pygame.image.load('assets/img/bullet.png')
-enemy_img = pygame.image.load('assets/img/creeper.png')
-creeperh = pygame.image.load('assets/img/creeperh.png')
-bomb_img = pygame.image.load('assets/img/bomb.png')
-startscreen = pygame.image.load('assets/img/start.jpg')
-winscreen = pygame.image.load('assets/img/finish.jpg')
-ghast = pygame.image.load('assets/img/ghast.png')
-ghasth = pygame.image.load('assets/img/ghasth.png')
-shieldfull = pygame.image.load('assets/img/shieldfull.png')
-hit1 = pygame.image.load('assets/img/hit1.png')
-hit2 = pygame.image.load('assets/img/hit2.png')
-hit3 = pygame.image.load('assets/img/hit3.png')
-hit4 = pygame.image.load('assets/img/hit4.png')
-dead = pygame.image.load('assets/img/dead.png')
-lose = pygame.image.load('assets/img/lose.jpg')
-ship2 = pygame.image.load('assets/img/ship2.png')
-ship3 = pygame.image.load('assets/img/ship3.png')
-ship4 = pygame.image.load('assets/img/ship4.png')
-ship5 = pygame.image.load('assets/img/ship5.png')
-background = pygame.image.load('assets/img/background.jpg')
-ship_images = [ship_img, ship3, ship2, ship4, ship5]
 
 # Fonts
-FONT_SM = pygame.font.Font("assets/fonts/font.ttf", 24)
-FONT_MD = pygame.font.Font("assets/fonts/font.ttf", 32)
-FONT_LG = pygame.font.Font("assets/fonts/font.ttf", 64)
+FONT_SM = pygame.font.Font(current_path  + "/assets/fonts/font.ttf", 24)
+FONT_MD = pygame.font.Font(current_path  + "/assets/fonts/font.ttf", 32)
+FONT_LG = pygame.font.Font(current_path  + "/assets/fonts/font.ttf", 64)
+
+# Images
+ship_img = pygame.image.load(current_path  + '/assets/img/player.png')
+laser_img = pygame.image.load(current_path  + '/assets/img/bullet.png')
+enemy_img = pygame.image.load(current_path  + '/assets/img/creeper.png')
+creeperh = pygame.image.load(current_path  + '/assets/img/creeperh.png')
+bomb_img = pygame.image.load(current_path  + '/assets/img/bomb.png')
+startscreen = pygame.image.load(current_path  + '/assets/img/start.jpg')
+winscreen = pygame.image.load(current_path  + '/assets/img/finish.jpg')
+ghast = pygame.image.load(current_path  + '/assets/img/ghast.png')
+ghasth = pygame.image.load(current_path  + '/assets/img/ghasth.png')
+shieldfull = pygame.image.load(current_path  + '/assets/img/shieldfull.png')
+hit1 = pygame.image.load(current_path  + '/assets/img/hit1.png')
+hit2 = pygame.image.load(current_path  + '/assets/img/hit2.png')
+hit3 = pygame.image.load(current_path  + '/assets/img/hit3.png')
+hit4 = pygame.image.load(current_path  + '/assets/img/hit4.png')
+dead = pygame.image.load(current_path  + '/assets/img/dead.png')
+lose = pygame.image.load(current_path  + '/assets/img/lose.jpg')
+ship2 = pygame.image.load(current_path  + '/assets/img/ship2.png')
+ship3 = pygame.image.load(current_path  + '/assets/img/ship3.png')
+ship4 = pygame.image.load(current_path  + '/assets/img/ship4.png')
+ship5 = pygame.image.load(current_path  + '/assets/img/ship5.png')
+background = pygame.image.load(current_path  + '/assets/img/background.jpg')
+ship_images = [ship_img, ship3, ship2, ship4, ship5]
 
 # Sounds
-shot = pygame.mixer.Sound('assets/sounds/shot.ogg')
-bowhit = pygame.mixer.Sound('assets/sounds/ehitbow.ogg')
-death = pygame.mixer.Sound('assets/sounds/death.ogg')
-edamage = pygame.mixer.Sound('assets/sounds/enemyhit.ogg')
-damage = pygame.mixer.Sound('assets/sounds/hit.ogg')
-pygame.mixer.music.load("assets/sounds/mineodity.ogg")
-gdamage = pygame.mixer.Sound('assets/sounds/ghast.ogg')
+shot = pygame.mixer.Sound(current_path  + '/assets/sounds/shot.ogg')
+bowhit = pygame.mixer.Sound(current_path  + '/assets/sounds/ehitbow.ogg')
+death = pygame.mixer.Sound(current_path  + '/assets/sounds/death.ogg')
+edamage = pygame.mixer.Sound(current_path  + '/assets/sounds/enemyhit.ogg')
+damage = pygame.mixer.Sound(current_path  + '/assets/sounds/hit.ogg')
+pygame.mixer.music.load(current_path  + '/assets/sounds/mineodity.ogg')
+gdamage = pygame.mixer.Sound(current_path  + '/assets/sounds/ghast.ogg')
 
 def setup():
     global stage, mobs, ship, lasers, vel1, player, bombs, fleet, soundef
@@ -309,13 +314,13 @@ class Fleet:
 # Game helper functions
 def soundef():
     if stage == START:
-        pygame.mixer.music.load("assets/sounds/begin.ogg")
+        pygame.mixer.music.load(current_path  + "/assets/sounds/begin.ogg")
     elif stage == PLAYING:
-        pygame.mixer.music.load("assets/sounds/mineodity.ogg")
+        pygame.mixer.music.load(current_path  + "/assets/sounds/mineodity.ogg")
     elif stage == LOSE:
-        pygame.mixer.music.load("assets/sounds/end.ogg")
+        pygame.mixer.music.load(current_path  + "/assets/sounds/end.ogg")
     elif stage == WIN:
-        pygame.mixer.music.load("assets/sounds/congrats.ogg")
+        pygame.mixer.music.load(current_path  + "/assets/sounds/congrats.ogg")
 
     pygame.mixer.music.play(-1)
         
@@ -445,4 +450,3 @@ while not done:
 
 # Close window and quit
 pygame.quit()
-
